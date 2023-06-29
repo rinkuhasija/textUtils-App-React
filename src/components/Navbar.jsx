@@ -1,6 +1,28 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 
-function Navbar({ title }) {
+function Navbar({ title, initialStyle, setStyles }) {
+
+    const [btnText, setBtnText] = useState("Enable Dark mode");
+    
+    function toggleStyleChange() {
+        if (initialStyle.color === 'black' ) {
+            setStyles({
+                color: "white",
+                backgroundColor:"black",
+                border : '1px solid white',
+                padding : '20px'
+            })
+            setBtnText("Enable Light Mode")
+        } else {
+            setStyles({
+                color:'black',
+                backgroundColor :"white",
+                });
+                setBtnText('Enable dark mode')
+        }
+    }   
+
     return (
         <div><nav className="navbar bg-dark border-bottom border-bottom-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div className="container-fluid">
@@ -32,6 +54,7 @@ function Navbar({ title }) {
                         </li>
                     </ul>
                 </div>
+                <button onClick={toggleStyleChange}  className='btn btn-success'> {btnText} </button>
             </div>
         </nav></div>
     )

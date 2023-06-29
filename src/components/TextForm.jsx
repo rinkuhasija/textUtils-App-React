@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-function TextForm({ heading }) {
+function TextForm({ heading, styles }) {
 
     const [text, setText] = useState("initial Value")
 
