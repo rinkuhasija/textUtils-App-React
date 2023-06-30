@@ -14,7 +14,7 @@ export default function App() {
     <div>
       <Navbar initialStyle={myStyles} setStyles={setMyStyles} title='TextUtils' />  <br />
 
-      <div className="container" style={myStyles}>
+      <div className="container my-5" style={myStyles}>
         <TextForm styles={myStyles} heading='Enter the text to analyze' />
       </div>
 

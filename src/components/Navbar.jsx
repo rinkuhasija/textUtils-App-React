@@ -9,7 +9,7 @@ function Navbar({ title, initialStyle, setStyles }) {
         if (initialStyle.color === 'black' ) {
             setStyles({
                 color: "white",
-                backgroundColor:"black",
+                backgroundColor:"#2b3035",
                 border : '1px solid white',
                 padding : '20px'
             })
